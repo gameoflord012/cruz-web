@@ -1,4 +1,6 @@
-﻿#include <webgpu/webgpu.h>
+﻿#include "TestClass1.h"
+
+#include <webgpu/webgpu.h>
 #include <iostream>
 // If using Dawn
 #define WEBGPU_BACKEND_DAWN
