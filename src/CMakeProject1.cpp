@@ -1,6 +1,5 @@
 ﻿#include <webgpu/webgpu.h>
 #include <iostream>
-
 // If using Dawn
 #define WEBGPU_BACKEND_DAWN
 
@@ -15,6 +14,7 @@ int main(int, char**)
     // We create a descriptor
     WGPUInstanceDescriptor desc = {};
     desc.nextInChain = nullptr;
+    (void)desc;
 
     // We create the instance using this descriptor
 #ifdef WEBGPU_BACKEND_EMSCRIPTEN
@@ -34,4 +34,12 @@ int main(int, char**)
     std::cout << "WGPU instance: " << instance << std::endl;
 
     wgpuInstanceRelease(instance);
+}
+
+void a()
+{
+  for(int i = 0; i < 10; i++)
+    {
+      std::cout << "hello world" << std::endl;
+    }
 }
